@@ -14,6 +14,10 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class Player extends Card {
+
+    @property
+    playerHp:[number] 
+
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
