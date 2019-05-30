@@ -14,7 +14,7 @@ const {ccclass, property} = cc._decorator;
 export default class NewClass extends cc.Component {
 
     @property
-    number:number
+    index:number
 
     @property
     cardName: string = 'nmsl';
@@ -40,10 +40,15 @@ export default class NewClass extends cc.Component {
 
     }
 
-    init (cardName) {
-        this.cardName = cardName;
+    init (properties:Object) {
+        this.cardName = properties["name"];
         let label = this.node.children[0].getComponent(cc.Label)
-        label.string = cardName;
+
+        this.index = properties["index"];
+        label.string = this.cardName;
+
+        this.node.width = properties["width"];
+        this.node.height = properties["height"];
     }
 
     // update (dt) {}

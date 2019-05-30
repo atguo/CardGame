@@ -22,6 +22,12 @@ export default class NewClass extends cc.Component {
     @property(cc.Integer)
     height: number
 
+    @property(cc.Integer)
+    cardWidth: number
+
+    @property
+    cardHeight: number
+
     @property(cc.Prefab)
     player: cc.Node
     // LIFE-CYCLE CALLBACKS:
@@ -46,6 +52,8 @@ export default class NewClass extends cc.Component {
 
     start () {
         this.positions = this.getPositons()
+        let player_position = Math.floor(Math.random() * 100) % 9;
+        
         for(let i=0;i<9;i++){
             console.log(this.positions[i]);
             let card:cc.Node = null;
@@ -55,10 +63,30 @@ export default class NewClass extends cc.Component {
                 card = cc.instantiate(this.cardPrefab);
             }
             card.setPosition(this.positions[i]);
-            card.getComponent("Card").init("name");
+
+            let cardProperties:Object = {};
+            cardProperties["index"] = i;
+            cardProperties["width"] = this.cardWidth;
+            cardProperties["height"] = this.cardHeight;
+            if(i == player_position){
+                cardProperties["name"] = "player"
+                card.getComponent("Card").init(cardProperties);
+            } else {
+                cardProperties["name"] = "enemy" 
+                card.getComponent("Card").init(cardProperties);
+            }
+            
             this.node.children[1].addChild(card);
         }
         
+    }
+
+    setCardWidth() {
+        this.cardWidth = (this.width - (10 * 3)) / 3
+    }
+
+    setCardHight() {
+        this.cardHeight = this.width * 3 / 2;
     }
 
     getPositons() {
