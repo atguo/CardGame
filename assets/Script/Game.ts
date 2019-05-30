@@ -55,6 +55,7 @@ export default class NewClass extends cc.Component {
                 card = cc.instantiate(this.cardPrefab);
             }
             card.setPosition(this.positions[i]);
+            card.getComponent("Card").init("name");
             this.node.children[1].addChild(card);
         }
         

@@ -40,5 +40,11 @@ export default class NewClass extends cc.Component {
 
     }
 
+    init (cardName) {
+        this.cardName = cardName;
+        let label = this.node.children[0].getComponent(cc.Label)
+        label.string = cardName;
+    }
+
     // update (dt) {}
 }
