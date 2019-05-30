@@ -60,7 +60,7 @@ export default class Game extends cc.Component {
             if(this.otherCardPool.size()>0){
                 card = this.otherCardPool.get();
             } else {
-                card = cc.instantiate(this.cardPrefab);
+                card = this.player
             }
             card.setPosition(this.positions[i]);
 
@@ -71,6 +71,7 @@ export default class Game extends cc.Component {
             if(i == player_position){
                 cardProperties["name"] = "player"
                 card.getComponent("Card").init(cardProperties);
+                card.addComponent("Player");
             } else {
                 cardProperties["name"] = "enemy" 
                 card.getComponent("Card").init(cardProperties);

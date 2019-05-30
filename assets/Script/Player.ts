@@ -10,19 +10,53 @@ import Card from "./Card";
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
-const {ccclass, property} = cc._decorator;
+const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class Player extends Card {
-    @property
-
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
 
-    start () {
+    start() {
 
     }
 
+    onKeyDown(event) {
+        switch (event.KeyCode) {
+            case cc.macro.KEY.up:
+            case cc.macro.KEY.w:
+                this.moveUp();
+                break;
+            case cc.macro.KEY.down:
+            case cc.macro.KEY.s:
+                this.moveDown();
+                break;
+            case cc.macro.KEY.left:
+            case cc.macro.KEY.a:
+                this.moveLeft();
+                break;
+            case cc.macro.KEY.right:
+            case cc.macro.KEY.d:
+                this.moveRight();
+                break;
+        }
+    }
+
+    moveUp() {
+        this.index += 3;
+    }
+
+    moveDown() {
+        this.index -= 3;
+    }
+
+    moveLeft() {
+        this.index -= 1;
+    }
+
+    moveRight() {
+        this.index += 1;
+    }
     // update (dt) {}
 }
