@@ -65,7 +65,7 @@ export default class Game extends cc.Component {
             card.setPosition(this.positions[i]);
 
             let cardProperties:Object = {};
-            cardProperties["index"] = i;
+            cardProperties["index"] = i + 1;
             cardProperties["width"] = this.cardWidth;
             cardProperties["height"] = this.cardHeight;
             if(i == player_position){

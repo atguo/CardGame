@@ -44,19 +44,27 @@ export default class Player extends Card {
     }
 
     moveUp() {
-        this.index += 3;
+        if(this.index < 7){
+            this.index += 3;
+        }
     }
 
     moveDown() {
-        this.index -= 3;
+        if(this.index > 3){
+            this.index -= 3;
+        }
     }
 
     moveLeft() {
-        this.index -= 1;
+        if(((this.index - 1) % 3) !== 0){
+            this.index -= 1;
+        }
     }
 
-    moveRight() {
-        this.index += 1;
+    moveRight() { 
+        if(((this.index + 1) % 3 ) !== 1 ){
+            this.index += 1;
+        }
     }
     // update (dt) {}
 }
