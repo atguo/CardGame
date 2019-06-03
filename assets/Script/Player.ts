@@ -13,58 +13,34 @@ import Card from "./Card";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class Player extends Card {
+export default class Player extends cc.Component{
     // LIFE-CYCLE CALLBACKS:
+    @property
+    index: number
 
-    // onLoad () {}
+    @property
+    target: cc.Node
+
+    onLoad () {
+        console.log("player script has onload")
+        this.index = this.node.getComponent("Card").index;
+        
+    }
 
     start() {
 
     }
 
-    onKeyDown(event) {
-        switch (event.KeyCode) {
-            case cc.macro.KEY.up:
-            case cc.macro.KEY.w:
-                this.moveUp();
-                break;
-            case cc.macro.KEY.down:
-            case cc.macro.KEY.s:
-                this.moveDown();
-                break;
-            case cc.macro.KEY.left:
-            case cc.macro.KEY.a:
-                this.moveLeft();
-                break;
-            case cc.macro.KEY.right:
-            case cc.macro.KEY.d:
-                this.moveRight();
-                break;
-        }
+    playerMove(target:number){
+        let temp = null
+        this.target = this.node.parent.getChildByName("" + target)
+        this.target.active = false;        
     }
 
-    moveUp() {
-        if(this.index < 7){
-            this.index += 3;
-        }
+    parseNodeName(name:string){
+        return Number.parseInt(name)
     }
 
-    moveDown() {
-        if(this.index > 3){
-            this.index -= 3;
-        }
-    }
-
-    moveLeft() {
-        if(((this.index - 1) % 3) !== 0){
-            this.index -= 1;
-        }
-    }
-
-    moveRight() { 
-        if(((this.index + 1) % 3 ) !== 1 ){
-            this.index += 1;
-        }
-    }
+    
     // update (dt) {}
 }

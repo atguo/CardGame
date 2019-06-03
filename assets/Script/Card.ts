@@ -17,7 +17,7 @@ export default class Card extends cc.Component {
     index:number
 
     @property
-    cardName: string = 'nmsl';
+    cardName: string;
 
     @property
     position: cc.Vec2 = null;
@@ -38,16 +38,28 @@ export default class Card extends cc.Component {
 
     }
 
-    init (properties:Object) {
-        this.cardName = properties["name"];
-        let label = this.node.children[0].getComponent(cc.Label)
-
+    init (cardName:string, properties:Object) {
+        this.cardName = cardName;
         this.index = properties["index"];
-        label.string = this.cardName;
-
+        this.node.name = "" + this.index;
         this.node.width = properties["width"];
         this.node.height = properties["height"];
+        this.position = properties["position"];
+
     }
 
-    // update (dt) {}
+    updateCardInfo(){
+        this.node.children[0].getComponent(cc.Label).string = this.cardName
+        this.node.setPosition(this.position)    
+    }
+
+    moveTo(to:number, to_position:cc.Vec2){
+        this.index = to;
+        this.position = to_position
+        this.node.name = "" + this.index;
+    }
+
+    update (dt) {
+        this.updateCardInfo()
+    }
 }

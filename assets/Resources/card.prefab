@@ -39,15 +39,15 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 80,
+      "g": 40,
+      "b": 40,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 210,
-      "height": 280
+      "width": 0,
+      "height": 0
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -216,8 +216,8 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 210,
-      "height": 280
+      "width": 0,
+      "height": 0
     },
     "_resize": 0,
     "_N$layoutType": 0,
@@ -247,8 +247,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "label": null,
-    "cardName": "nmsl",
+    "cardName": "",
     "position": null,
     "_id": ""
   },
