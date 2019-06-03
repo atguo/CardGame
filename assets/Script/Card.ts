@@ -17,6 +17,15 @@ export default class Card extends cc.Component {
     index:number
 
     @property
+    resourceID:string
+
+    @property
+    cardImage:cc.SpriteFrame
+
+    @property
+    cardExist:Boolean
+
+    @property
     cardName: string;
 
     @property

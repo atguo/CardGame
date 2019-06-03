@@ -1,5 +1,4 @@
-import Card from "./Card";
-
+import Card from './Card'
 // Learn TypeScript:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -10,41 +9,21 @@ import Card from "./Card";
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
-const { ccclass, property } = cc._decorator;
+const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Player extends cc.Component {
+export default class Event extends Card {
 
     @property
-    playerHp:[number] 
+    description:string
 
     // LIFE-CYCLE CALLBACKS:
-    @property
-    index: number
 
-    @property
-    target: cc.Node
+    // onLoad () {}
 
-    onLoad () {
-        console.log("player script has onload")
-        this.index = this.node.getComponent("Card").index;
-        
-    }
-
-    start() {
+    start () {
 
     }
 
-    playerMove(target:number){
-        let temp = null
-        this.target = this.node.parent.getChildByName("" + target)
-        this.target.active = false;        
-    }
-
-    parseNodeName(name:string){
-        return Number.parseInt(name)
-    }
-
-    
     // update (dt) {}
 }
