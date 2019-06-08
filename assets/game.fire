@@ -17,7 +17,7 @@
         "__id__": 2
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [],
     "_prefab": null,
@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3612326388888889,
-      "y": 0.3612326388888889,
+      "x": 0.27361111111111114,
+      "y": 0.27361111111111114,
       "z": 1
     },
     "_quat": {
@@ -72,7 +72,7 @@
       }
     ],
     "_active": true,
-    "_level": 0,
+    "_level": 1,
     "_components": [
       {
         "__id__": 9
@@ -92,7 +92,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 660,
+      "width": 420,
       "height": 900
     },
     "_anchorPoint": {
@@ -102,7 +102,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 330,
+      "x": 210,
       "y": 450,
       "z": 0
     },
@@ -152,7 +152,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 660,
+      "width": 420,
       "height": 900
     },
     "_anchorPoint": {
@@ -233,14 +233,14 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 34,
+      "g": 31,
+      "b": 31,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 660,
+      "width": 420,
       "height": 900
     },
     "_anchorPoint": {
@@ -250,7 +250,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -330,
+      "x": -210,
       "y": -450,
       "z": 0
     },
@@ -312,7 +312,7 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 660,
+      "width": 420,
       "height": 900
     },
     "_resize": 0,
@@ -359,7 +359,7 @@
     "_enabled": true,
     "_designResolution": {
       "__type__": "cc.Size",
-      "width": 660,
+      "width": 420,
       "height": 900
     },
     "_fitWidth": false,
@@ -374,7 +374,7 @@
       "__id__": 2
     },
     "_enabled": true,
-    "width": 660,
+    "width": 420,
     "height": 900,
     "_id": "6ehtyW/MVCV70o9fJ3lSj5"
   }

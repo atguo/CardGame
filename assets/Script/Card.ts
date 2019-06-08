@@ -54,21 +54,32 @@ export default class Card extends cc.Component {
         this.node.width = properties["width"];
         this.node.height = properties["height"];
         this.position = properties["position"];
-
+        this.node.setPosition(this.position);
     }
 
     updateCardInfo(){
         this.node.children[0].getComponent(cc.Label).string = this.cardName
-        this.node.setPosition(this.position)    
+        this.node.name = "" + this.index;
     }
 
-    moveTo(to:number, to_position:cc.Vec2){
-        this.index = to;
-        this.position = to_position
-        this.node.name = "" + this.index;
+    updateInfo(info){
+        this.index = info.index;
+        if(info.position){
+            this.position = info.position;
+            this.node.setPosition(this.position);
+        }  
     }
 
     update (dt) {
         this.updateCardInfo()
+    }
+    
+    unuse(){
+        console.log("unuse excuted:",this.node)
+    }
+
+    reuse(){
+        this.node.runAction(cc.scaleTo(0.1,1,1));
+        console.log('reuse excuted')
     }
 }

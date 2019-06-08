@@ -22,29 +22,13 @@ export default class Player extends cc.Component {
     @property
     index: number
 
-    @property
-    target: cc.Node
-
     onLoad () {
         console.log("player script has onload")
         this.index = this.node.getComponent("Card").index;
-        
     }
 
     start() {
 
     }
-
-    playerMove(target:number){
-        let temp = null
-        this.target = this.node.parent.getChildByName("" + target)
-        this.target.active = false;        
-    }
-
-    parseNodeName(name:string){
-        return Number.parseInt(name)
-    }
-
-    
     // update (dt) {}
 }
