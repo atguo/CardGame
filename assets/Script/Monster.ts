@@ -15,12 +15,14 @@ const {ccclass, property} = cc._decorator;
 export default class Monster extends cc.Component {
 
     @property
-    healthHurt: number[] //造成的伤害
+    damage: number[]
 
     @property
     expired:number   //存活时间，-1表示永久存活
 
-    // onLoad () {}
+    onLoad () {
+        this.damage = [-2, -1, -1]
+    }
 
     start () {
 
@@ -28,6 +30,12 @@ export default class Monster extends cc.Component {
 
     init(){
         
+    }
+
+    disappear(){
+
+        
+        return this.damage
     }
 
     // update (dt) {}

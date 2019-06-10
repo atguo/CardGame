@@ -16,7 +16,12 @@ export default class Empty extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    onLoad () {
+        this.damage = [0, 0, 0]
+    }
+
+    @property
+    damage: number[]
 
     start () {
 
@@ -24,6 +29,12 @@ export default class Empty extends cc.Component {
 
     init(){
         
+    }
+
+    disappear(){
+
+
+        return this.damage
     }
     // update (dt) {}
 }

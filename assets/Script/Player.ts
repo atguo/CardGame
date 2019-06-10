@@ -19,7 +19,8 @@ export default class Player extends cc.Component {
     status: number[];
 
 
-
+    @property
+    shouleUpdate: boolean = false;
 
 
     onLoad () {
@@ -37,5 +38,20 @@ export default class Player extends cc.Component {
     init(){
         
     }
-    // update (dt) {}
+
+    receiveDamage(damage:number[]){
+        this.status.forEach((item, index)=>{
+            item = item + damage[index];
+        })
+        this.shouleUpdate = true
+    }
+
+    update (dt) {
+        if(this.shouleUpdate){
+            // update ui
+
+            
+            this.shouleUpdate = false;
+        }
+    }
 }

@@ -87,32 +87,63 @@ export default class Controller extends cc.Component {
         return properties;
     }
 
+
     init(){
         let player_index = Math.floor(Math.random() * 100) % 9;
         this.player_index = player_index + 1;
+        this.initPlayer();
+
         for(let i=0;i<9;i++){
-            let card:cc.Node = null;
-            if(this.otherCardPool.size()>0){
-                card = this.otherCardPool.get();
-            } else {
-                card = cc.instantiate(this.cardPrefab);
+            if(i+1 !== this.player_index){
+                let card: cc.Node = null;
+                if(this.otherCardPool.size()> 0){
+                    card = this.otherCardPool.get();
+                } else {
+                    card = cc.instantiate(this.cardPrefab);
+                }
+                this.initCard(card, i+1);
+                this.node.addChild(card);
             }
-
-            card.addComponent("Card");
-            let properties = this.initCardProperties(i+1, this.positions[i])
-            let cardName:string = "";
-            if((i + 1) === this.player_index){
-                cardName = "player";
-                card.addComponent("Player")
-            } else {
-                cardName = this.setCardType();
-                card.addComponent(cardName);
-                card.getComponent(cardName).init();
-            }
-
-            card.getComponent("Card").init(cardName, properties);
-            this.node.addChild(card);
+           
         }
+        console.log(this.node.children)
+    }
+
+
+    initPlayer(){
+        let player: cc.Node = null;
+        player = cc.instantiate(this.cardPrefab);
+        player.addComponent("Card");
+        let playerProperties = this.initCardProperties(this.player_index, this.positions[this.player_index-1]);
+        player.addComponent("Player");
+        player.getComponent("Card").init("luoop", "Player", playerProperties);
+        this.node.addChild(player);
+    }
+
+
+    initCard(card:cc.Node, index:number){
+        if(card.getComponent("Card")){
+            let info = {};
+            info["index"] = index;
+            info["position"] = this.positions[index-1];
+            
+            //change card type
+            let preCardType = card.getComponent("Card").getType();
+            card.removeComponent(preCardType);
+            let curr_type = this.setCardType();
+            info["cardName"] = curr_type;
+            info["type"] = curr_type;
+            card.getComponent("Card").updateInfo(info)
+            card.addComponent(curr_type)
+            card.getComponent(curr_type).init();
+            return
+        }
+
+        card.addComponent("Card");
+        let type = this.setCardType();
+        card.getComponent("Card").init(type, type, this.initCardProperties(index, this.positions[index-1]));
+        card.addComponent(type)
+        card.getComponent(type).init();
     }
 
     onKeyDown(event) {
@@ -139,7 +170,8 @@ export default class Controller extends cc.Component {
         //now target position is player position but canvas not change 
         
         if(this.canMove){
-            this.move(this.player_index, this.target_position)
+            this.move(this.player_index, this.target_position);
+            this.canMove = false;
         }
         
     }
@@ -151,7 +183,13 @@ export default class Controller extends cc.Component {
     }
 
     move(from, to){
-        this.node.getChildByName(""+to).runAction(cc.scaleTo(0.3,0,0));
+        let target_node = this.node.getChildByName(""+to);
+
+        let target_type:string = target_node.getComponent("Card").getType()
+        let damage:number[] = target_node.getComponent(target_type).disappear();
+        this.node.getChildByName("" + from).getComponent("Player").receiveDamage(damage);
+
+        target_node.runAction(cc.scaleTo(0.3,0,0));
         
         setTimeout(()=>{
             this.otherCardPool.put(this.node.getChildByName(""+to));
@@ -165,19 +203,11 @@ export default class Controller extends cc.Component {
                 if(this.otherCardPool.size()>0){
                     console.log("card pool is not empty")
                     card = this.otherCardPool.get();
-                    let updateinfo = {};
-                    updateinfo["index"] = from;
-                    updateinfo["position"] = this.positions[from-1];
-                    card.getComponent("Card").updateInfo(updateinfo);
                 } else {
                     console.log("card pool is empty")
-                    card = cc.instantiate(this.cardPrefab);
-                    let properties = this.initCardProperties(from, this.positions[from-1])
-                    let cardName:string = "enemy";
-                    card.addComponent("Card")
-                    card.getComponent("Card").init(cardName, properties);
+                    card = cc.instantiate(this.cardPrefab)
                 }
-                
+                this.initCard(card, from);
                 this.node.addChild(card);
                 this.canMove = false
             }, 300)
@@ -186,6 +216,7 @@ export default class Controller extends cc.Component {
         },500)
         
     }
+
 
     setCardSize() {
         this.cardWidth = (this.width - (10 * 3)) / 3;

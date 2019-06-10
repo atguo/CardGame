@@ -15,14 +15,16 @@ const {ccclass, property} = cc._decorator;
 export default class Reward extends cc.Component {
 
     @property
-    healthCure: number[] //回复
+    damage: number[]
 
     @property
     expired:number
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    onLoad () {
+        this.damage = [-1, -1, -1]
+    }
 
     start () {
 
@@ -32,5 +34,10 @@ export default class Reward extends cc.Component {
         
     }
 
+    disappear(){
+
+        
+        return this.damage
+    }
     // update (dt) {}
 }

@@ -17,9 +17,15 @@ export default class Event extends cc.Component {
     @property
     description:string
 
+    @property
+    damage: number[]
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    onLoad () {
+        this.damage = [-1, -1, -1]
+    }
+
+
 
     start () {
         
@@ -27,6 +33,12 @@ export default class Event extends cc.Component {
 
     init(){
         
+    }
+
+    disappear(){
+
+        
+        return this.damage
     }
     // update (dt) {}
 }

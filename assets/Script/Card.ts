@@ -22,11 +22,12 @@ export default class Card extends cc.Component {
     @property
     cardImage:cc.SpriteFrame
 
-    @property
-    cardExist:Boolean
-
+    //use for ui
     @property
     cardName: string;
+
+    @property
+    type: string
 
     @property
     position: cc.Vec2 = null;
@@ -47,8 +48,9 @@ export default class Card extends cc.Component {
 
     }
 
-    init (cardName:string, properties:Object) {
+    init (cardName:string, type:string, properties:Object) {
         this.cardName = cardName;
+        this.type = type;
         this.index = properties["index"];
         this.node.name = "" + this.index;
         this.node.width = properties["width"];
@@ -67,7 +69,17 @@ export default class Card extends cc.Component {
         if(info.position){
             this.position = info.position;
             this.node.setPosition(this.position);
-        }  
+        }
+        if(info.tpye){
+            this.type = info.type
+        }
+        if(info.cardName){
+            this.cardName = info.cardName
+        }
+    }
+
+    getType(){
+        return this.type;
     }
 
     update (dt) {

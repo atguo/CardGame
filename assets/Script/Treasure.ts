@@ -15,10 +15,13 @@ const {ccclass, property} = cc._decorator;
 export default class Treasure extends cc.Component {
 
     
-
+    @property
+    damage: number[]
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    onLoad () {
+        this.damage = [-1, -1, -1]
+    }
 
     start () {
 
@@ -28,5 +31,10 @@ export default class Treasure extends cc.Component {
         
     }
 
+    disappear(){
+
+        
+        return this.damage
+    }
     // update (dt) {}
 }
