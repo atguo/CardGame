@@ -14,10 +14,10 @@ const {ccclass, property} = cc._decorator;
 export default class Game extends cc.Component {
 
     @property
-    width: number = 660
+    width: number
 
     @property
-    height: number = 900
+    height: number
     // onLoad () {
     // }
 

@@ -1,4 +1,4 @@
-import Card from './Card'
+
 // Learn TypeScript:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -12,10 +12,10 @@ import Card from './Card'
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Reward extends Card {
+export default class Reward extends cc.Component {
 
     @property
-    healthCure:[number] //回复
+    healthCure: number[] //回复
 
     @property
     expired:number
@@ -26,6 +26,10 @@ export default class Reward extends Card {
 
     start () {
 
+    }
+
+    init(){
+        
     }
 
     // update (dt) {}

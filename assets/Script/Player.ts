@@ -1,4 +1,3 @@
-import Card from "./Card";
 
 // Learn TypeScript:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
@@ -15,20 +14,28 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class Player extends cc.Component {
 
+    // @param {Array} health: [<健康>,<精力>,<理智>]
     @property
-    playerHp:[number] 
+    status: number[];
 
-    // LIFE-CYCLE CALLBACKS:
-    @property
-    index: number
+
+
+
 
     onLoad () {
-        console.log("player script has onload")
-        this.index = this.node.getComponent("Card").index;
+        this.status = [100, 100, 100];
     }
 
     start() {
 
+    }
+
+    updatePlayerStatus(dt:[number]){
+        
+    }
+
+    init(){
+        
     }
     // update (dt) {}
 }

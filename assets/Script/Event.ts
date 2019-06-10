@@ -12,7 +12,7 @@ import Card from './Card'
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Event extends Card {
+export default class Event extends cc.Component {
 
     @property
     description:string
@@ -22,8 +22,11 @@ export default class Event extends Card {
     // onLoad () {}
 
     start () {
-
+        
     }
 
+    init(){
+        
+    }
     // update (dt) {}
 }

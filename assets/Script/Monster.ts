@@ -12,10 +12,10 @@ import Card from './Card'
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Monster extends Card {
+export default class Monster extends cc.Component {
 
     @property
-    healthHurt:[number] //造成的伤害
+    healthHurt: number[] //造成的伤害
 
     @property
     expired:number   //存活时间，-1表示永久存活
@@ -24,6 +24,10 @@ export default class Monster extends Card {
 
     start () {
 
+    }
+
+    init(){
+        
     }
 
     // update (dt) {}

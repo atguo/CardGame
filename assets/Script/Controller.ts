@@ -1,19 +1,18 @@
+import cardTypes from "./cardType";
+import Empty from "./Empty";
+import Monster from "./Monster";
+import Event from "./Event";
+import Reward from "./Reward";
+import Treasure from "./Treasure";
 import Player from "./Player";
-
-// Learn TypeScript:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
+import Card from "./Card";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class Controller extends cc.Component {
+
+    @property
+    cardType: string[]
 
     @property
     canMove: boolean = false
@@ -58,7 +57,12 @@ export default class Controller extends cc.Component {
         for(let i = 0; i < otherCardCount; i++){
             let otherCard = cc.instantiate(this.cardPrefab);
             this.otherCardPool.put(otherCard);
-        }      
+        };
+        this.cardType = [];
+        for(let i=0; i < cardTypes.length; i++){
+            this.cardType.push(cardTypes[i]);
+        }
+
     }
 
 
@@ -101,7 +105,9 @@ export default class Controller extends cc.Component {
                 cardName = "player";
                 card.addComponent("Player")
             } else {
-                cardName = "enemy" 
+                cardName = this.setCardType();
+                card.addComponent(cardName);
+                card.getComponent(cardName).init();
             }
 
             card.getComponent("Card").init(cardName, properties);
@@ -138,6 +144,11 @@ export default class Controller extends cc.Component {
         
     }
 
+    //return a random card type
+    setCardType(){
+        let r = Math.floor((Math.random() * this.cardType.length));
+        return this.cardType[r];
+    }
 
     move(from, to){
         this.node.getChildByName(""+to).runAction(cc.scaleTo(0.3,0,0));
@@ -150,7 +161,6 @@ export default class Controller extends cc.Component {
            
             setTimeout(()=>{
                 this.player_index = to;
-
                 let card:cc.Node = null;
                 if(this.otherCardPool.size()>0){
                     console.log("card pool is not empty")
@@ -175,9 +185,6 @@ export default class Controller extends cc.Component {
             
         },500)
         
-        
-        
-
     }
 
     setCardSize() {

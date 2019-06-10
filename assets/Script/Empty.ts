@@ -1,4 +1,4 @@
-import Card from './Card'
+
 // Learn TypeScript:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -12,7 +12,7 @@ import Card from './Card'
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Empty extends Card {
+export default class Empty extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -22,5 +22,8 @@ export default class Empty extends Card {
 
     }
 
+    init(){
+        
+    }
     // update (dt) {}
 }

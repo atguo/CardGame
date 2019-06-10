@@ -12,7 +12,7 @@ import Card from './Card'
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Treasure extends Card {
+export default class Treasure extends cc.Component {
 
     
 
@@ -22,6 +22,10 @@ export default class Treasure extends Card {
 
     start () {
 
+    }
+
+    init(){
+        
     }
 
     // update (dt) {}
