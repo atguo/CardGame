@@ -27,6 +27,9 @@ export default class NewClass extends cc.Component {
     @property
     rightdescription :string;
 
+    @property
+    event: Object
+
     onLoad () {
         let event = events[0];
         this.description = event["description"];
@@ -63,5 +66,22 @@ export default class NewClass extends cc.Component {
         this.node.opacity = 0;
     }
 
-    // update (dt) {}
+    setEvent(event:Object){
+        this.event = event;
+    }
+
+    update (dt) {
+        if(this.event){
+            this.description = this.event["description"];
+
+            this.leftHealth = this.event["option"][0]["health"];
+            this.leftbuttonname = this.event["option"][0]["buttonname"];
+            this.leftdescription = this.event["option"][0]["description"];
+    
+            this.rightHealth = this.event["option"][1]["health"];
+            this.rightbuttonname = this.event["option"][1]["buttonname"];
+            this.rightdescription = this.event["option"][1]["description"];
+        }
+       
+    }   
 }
