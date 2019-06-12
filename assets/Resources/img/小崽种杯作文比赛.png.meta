@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "30b795da-299e-44bb-9faf-b0913a170d7e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "小崽种杯作文比赛": {
+      "ver": "1.0.4",
+      "uuid": "c6604c28-f581-48e8-8f53-445e066222d7",
+      "rawTextureUuid": "30b795da-299e-44bb-9faf-b0913a170d7e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 362,
+      "height": 240,
+      "rawWidth": 362,
+      "rawHeight": 240,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

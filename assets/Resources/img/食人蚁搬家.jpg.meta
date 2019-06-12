@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "503a3319-c41a-409a-8b22-8e750e7ed290",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "食人蚁搬家": {
+      "ver": "1.0.4",
+      "uuid": "c5705996-5066-464c-bf5d-38141d43e27a",
+      "rawTextureUuid": "503a3319-c41a-409a-8b22-8e750e7ed290",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 567,
+      "height": 567,
+      "rawWidth": 567,
+      "rawHeight": 567,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

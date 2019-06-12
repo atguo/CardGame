@@ -1,4 +1,3 @@
-import Card from './Card'
 // Learn TypeScript:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -12,33 +11,23 @@ import Card from './Card'
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Event extends cc.Component {
+export default class Death extends cc.Component {
+
 
     @property
-    description:string
-
-    @property
-    damage: number[]
+    again: cc.Button
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
-        this.damage = [-1, -1, -1]
-    }
-
-
+    onLoad () {}
 
     start () {
-        
+        this.again = this.node.getChildByName("again").getComponent(cc.Button);
+        this.again.node.on("click", this.againClick, this);
     }
 
-    init(){
-        
+    againClick(){
+        cc.director.loadScene("game");
     }
 
-    disappear(){
-
-        
-        return this.damage
-    }
     // update (dt) {}
 }

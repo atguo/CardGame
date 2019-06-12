@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "15ec66c5-563e-48e5-8ec5-bb355721c4e6",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "新华书店": {
+      "ver": "1.0.4",
+      "uuid": "e764f29b-20c6-42dd-9a1c-1473a72b77bf",
+      "rawTextureUuid": "15ec66c5-563e-48e5-8ec5-bb355721c4e6",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 451,
+      "height": 358,
+      "rawWidth": 451,
+      "rawHeight": 358,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

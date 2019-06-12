@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "568ff6d2-e1c9-4c9b-b61c-70b73843f7ee",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "乐低玩具": {
+      "ver": "1.0.4",
+      "uuid": "d5918c00-e558-4789-8195-e0508b7b0a6b",
+      "rawTextureUuid": "568ff6d2-e1c9-4c9b-b61c-70b73843f7ee",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 512,
+      "height": 512,
+      "rawWidth": 512,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

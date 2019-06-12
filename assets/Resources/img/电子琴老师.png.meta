@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "730925ba-aee9-4c58-acc9-27e535d44977",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "电子琴老师": {
+      "ver": "1.0.4",
+      "uuid": "426e083e-2404-44c1-b834-9e58973dc2e6",
+      "rawTextureUuid": "730925ba-aee9-4c58-acc9-27e535d44977",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": 0.5,
+      "trimX": 8,
+      "trimY": 186,
+      "width": 983,
+      "height": 627,
+      "rawWidth": 1000,
+      "rawHeight": 1000,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

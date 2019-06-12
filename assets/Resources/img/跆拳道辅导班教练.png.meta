@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "59867665-d5e9-459c-9e62-0c5d59f62370",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "跆拳道辅导班教练": {
+      "ver": "1.0.4",
+      "uuid": "53487b86-a750-4058-b88e-32bfd4d70598",
+      "rawTextureUuid": "59867665-d5e9-459c-9e62-0c5d59f62370",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 548,
+      "height": 496,
+      "rawWidth": 548,
+      "rawHeight": 496,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

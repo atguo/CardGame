@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "a12f66b9-616b-4387-a71a-31ed9fd04378",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "车水马龙的公路": {
+      "ver": "1.0.4",
+      "uuid": "71e652a8-6ba9-4a70-86db-27967553a8c5",
+      "rawTextureUuid": "a12f66b9-616b-4387-a71a-31ed9fd04378",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 626,
+      "height": 322,
+      "rawWidth": 626,
+      "rawHeight": 322,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

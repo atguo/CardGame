@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "8d326e9e-3152-4861-b4a3-f89ac71f3162",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "笔记本": {
+      "ver": "1.0.4",
+      "uuid": "f26f7e65-5460-41e5-ba81-c6ba9514130c",
+      "rawTextureUuid": "8d326e9e-3152-4861-b4a3-f89ac71f3162",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 450,
+      "height": 342,
+      "rawWidth": 450,
+      "rawHeight": 342,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,448 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "",
+    "_objFlags": 0,
+    "_native": "",
+    "data": {
+      "__id__": 1
+    },
+    "optimizationPolicy": 0,
+    "asyncLoadAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "MoveResult",
+    "_objFlags": 0,
+    "_parent": null,
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_active": true,
+    "_level": 1,
+    "_components": [
+      {
+        "__id__": 11
+      },
+      {
+        "__id__": 12
+      }
+    ],
+    "_prefab": {
+      "__id__": 13
+    },
+    "_opacity": 251,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 245,
+      "g": 245,
+      "b": 245,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 420,
+      "height": 150
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 210,
+      "y": 750,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "groupIndex": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Info",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 6
+      }
+    ],
+    "_active": true,
+    "_level": 2,
+    "_components": [
+      {
+        "__id__": 9
+      }
+    ],
+    "_prefab": {
+      "__id__": 10
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 24,
+      "g": 3,
+      "b": 3,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 350,
+      "height": 50
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "groupIndex": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrivateNode",
+    "_name": "RICHTEXT_CHILD",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 3,
+    "_components": [
+      {
+        "__id__": 4
+      }
+    ],
+    "_prefab": {
+      "__id__": 5
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 24,
+      "g": 3,
+      "b": 3,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 350,
+      "height": 25
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": -175,
+      "y": 0,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "groupIndex": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true,
+    "_useOriginalSize": true,
+    "_string": "所以接下来的每周你都要去市中",
+    "_N$string": "所以接下来的每周你都要去市中",
+    "_fontSize": 25,
+    "_lineHeight": 25,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_batchAsBitmap": false,
+    "_N$horizontalAlign": 0,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 0,
+    "_N$cacheMode": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "e12875c7-4023-4d37-b29a-9dd52327e066"
+    },
+    "fileId": "77OCBBiQlBy41EiUNvqEGP",
+    "sync": false
+  },
+  {
+    "__type__": "cc.PrivateNode",
+    "_name": "RICHTEXT_CHILD",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 3,
+    "_components": [
+      {
+        "__id__": 7
+      }
+    ],
+    "_prefab": {
+      "__id__": 8
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 24,
+      "g": 3,
+      "b": 3,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 290.31,
+      "height": 25
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": -145.155,
+      "y": -25,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "groupIndex": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 6
+    },
+    "_enabled": true,
+    "_useOriginalSize": true,
+    "_string": "心的医院打狂犬疫苗了boy",
+    "_N$string": "心的医院打狂犬疫苗了boy",
+    "_fontSize": 25,
+    "_lineHeight": 25,
+    "_enableWrapText": true,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
+    "_spacingX": 0,
+    "_batchAsBitmap": false,
+    "_N$horizontalAlign": 0,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 0,
+    "_N$cacheMode": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "e12875c7-4023-4d37-b29a-9dd52327e066"
+    },
+    "fileId": "0dalUp6I1NlKJ5v7whe1z8",
+    "sync": false
+  },
+  {
+    "__type__": "cc.RichText",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_fontFamily": "Arial",
+    "_isSystemFontUsed": true,
+    "_N$string": "所以接下来的每周你都要去市中心的医院打狂犬疫苗了boy",
+    "_N$horizontalAlign": 1,
+    "_N$fontSize": 25,
+    "_N$font": null,
+    "_N$maxWidth": 350,
+    "_N$lineHeight": 25,
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "e12875c7-4023-4d37-b29a-9dd52327e066"
+    },
+    "fileId": "98YzzOKfdB9ZcvsafZHuOZ",
+    "sync": false
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_spriteFrame": {
+      "__uuid__": "482eb3ec-4d02-43ca-b7f4-7c4125ebaa14"
+    },
+    "_type": 3,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 1,
+    "_isTrimmedMode": true,
+    "_state": 0,
+    "_atlas": null,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Layout",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_layoutSize": {
+      "__type__": "cc.Size",
+      "width": 420,
+      "height": 150
+    },
+    "_resize": 0,
+    "_N$layoutType": 0,
+    "_N$padding": 0,
+    "_N$cellSize": {
+      "__type__": "cc.Size",
+      "width": 40,
+      "height": 40
+    },
+    "_N$startAxis": 0,
+    "_N$paddingLeft": 0,
+    "_N$paddingRight": 0,
+    "_N$paddingTop": 0,
+    "_N$paddingBottom": 0,
+    "_N$spacingX": 0,
+    "_N$spacingY": 0,
+    "_N$verticalDirection": 1,
+    "_N$horizontalDirection": 0,
+    "_N$affectedByScale": false,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "e12875c7-4023-4d37-b29a-9dd52327e066"
+    },
+    "fileId": "7c1PzZz6hFML0Zewarjcyu",
+    "sync": false
+  }
+]

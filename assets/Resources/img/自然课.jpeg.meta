@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "1a6feb32-782d-4c7a-ae15-1be742a56b21",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "自然课": {
+      "ver": "1.0.4",
+      "uuid": "406bb272-9c88-4953-b389-7dcd1b0efa8c",
+      "rawTextureUuid": "1a6feb32-782d-4c7a-ae15-1be742a56b21",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 600,
+      "height": 600,
+      "rawWidth": 600,
+      "rawHeight": 600,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

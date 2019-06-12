@@ -1,7 +1,7 @@
 const cardTypes = [
     "Monster",
     "Reward",
-    "Event",
+    "CardEvent",
     "Empty",
     "Treasure"
 ]

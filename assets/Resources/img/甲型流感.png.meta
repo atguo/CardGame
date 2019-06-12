@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "c383b952-054f-48f7-b3ce-f7eb7f01ae3f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "甲型流感": {
+      "ver": "1.0.4",
+      "uuid": "daf661e0-978b-4eaa-97d7-321dc093b84b",
+      "rawTextureUuid": "c383b952-054f-48f7-b3ce-f7eb7f01ae3f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 49,
+      "trimY": 60,
+      "width": 512,
+      "height": 490,
+      "rawWidth": 610,
+      "rawHeight": 610,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "44897915-44c2-45bd-bf7e-503f28474fde",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "普通数学老师": {
+      "ver": "1.0.4",
+      "uuid": "95bb6d95-7a58-407e-a8d5-6070c55c67d3",
+      "rawTextureUuid": "44897915-44c2-45bd-bf7e-503f28474fde",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 582,
+      "height": 595,
+      "rawWidth": 582,
+      "rawHeight": 595,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

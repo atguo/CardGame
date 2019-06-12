@@ -1,13 +1,5 @@
 import Card from './Card'
-// Learn TypeScript:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+import treasures from './data/TreasureList';
 
 const {ccclass, property} = cc._decorator;
 
@@ -19,11 +11,23 @@ export default class Treasure extends cc.Component {
     damage: number[]
     // LIFE-CYCLE CALLBACKS:
 
+    @property
+    treasure: Object;
+
+    
+
     onLoad () {
-        this.damage = [-1, -1, -1]
+        let rad = Math.floor(Math.random() * treasures.length);
+        this.treasure = treasures[rad];
     }
 
     start () {
+        let self = this.node;
+        self.getComponent(Card).updateInfo({cardName: this.treasure["name"]})
+        cc.loader.loadRes("img/" + this.treasure["name"], cc.SpriteFrame, function(err, sp){
+            self.getChildByName("Img").getComponent(cc.Sprite).spriteFrame = sp;
+            self.color = new cc.Color(255,207,64,255);
+        })
 
     }
 
@@ -32,9 +36,7 @@ export default class Treasure extends cc.Component {
     }
 
     disappear(){
-
-        
-        return this.damage
+        return [0, 0, 0]
     }
     // update (dt) {}
 }

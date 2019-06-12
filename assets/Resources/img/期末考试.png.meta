@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "031750e2-3da8-4aa5-a5ac-bae482b7c67f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "期末考试": {
+      "ver": "1.0.4",
+      "uuid": "4fd07349-dfaf-4056-b00d-e4ee4dbf8099",
+      "rawTextureUuid": "031750e2-3da8-4aa5-a5ac-bae482b7c67f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 557,
+      "height": 543,
+      "rawWidth": 557,
+      "rawHeight": 543,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

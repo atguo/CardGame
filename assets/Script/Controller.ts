@@ -1,7 +1,7 @@
 import cardTypes from "./cardType";
 import Empty from "./Empty";
 import Monster from "./Monster";
-import Event from "./Event";
+import Event from "./CardEvent";
 import Reward from "./Reward";
 import Treasure from "./Treasure";
 import Player from "./Player";
@@ -15,7 +15,10 @@ export default class Controller extends cc.Component {
     cardType: string[]
 
     @property
-    canMove: boolean = false
+    canLogicMove: boolean
+
+    @property
+    canMove: boolean
 
     @property
     width: number
@@ -52,6 +55,8 @@ export default class Controller extends cc.Component {
             this.onKeyDown,
             this,
         );
+        this.canMove = true;
+        this.canLogicMove = false;
         this.otherCardPool = this.otherCardPool = new cc.NodePool("Card");
         let otherCardCount = 9;
         for(let i = 0; i < otherCardCount; i++){
@@ -106,7 +111,6 @@ export default class Controller extends cc.Component {
             }
            
         }
-        console.log(this.node.children)
     }
 
 
@@ -124,13 +128,11 @@ export default class Controller extends cc.Component {
     initCard(card:cc.Node, index:number){
         if(card.getComponent("Card")){
             let info = {};
+            let curr_type = this.getCardType();
             info["index"] = index;
             info["position"] = this.positions[index-1];
-            
-            //change card type
             let preCardType = card.getComponent("Card").getType();
             card.removeComponent(preCardType);
-            let curr_type = this.setCardType();
             info["cardName"] = curr_type;
             info["type"] = curr_type;
             card.getComponent("Card").updateInfo(info)
@@ -140,81 +142,117 @@ export default class Controller extends cc.Component {
         }
 
         card.addComponent("Card");
-        let type = this.setCardType();
+        let type = this.getCardType();
         card.getComponent("Card").init(type, type, this.initCardProperties(index, this.positions[index-1]));
         card.addComponent(type)
         card.getComponent(type).init();
     }
 
     onKeyDown(event) {
-        // console.log("player index is : " + this.player_index)
-        switch (event.keyCode) {
-            case cc.macro.KEY.up:
-            case cc.macro.KEY.w:
-                this.moveUp();
-                break;
-            case cc.macro.KEY.down:
-            case cc.macro.KEY.s:
-                this.moveDown();
-                break;
-            case cc.macro.KEY.left:
-            case cc.macro.KEY.a:
-                this.moveLeft();
-                break;
-            case cc.macro.KEY.right:
-            case cc.macro.KEY.d:
-                this.moveRight();
-                break;
-        }
-
-        //now target position is player position but canvas not change 
-        
         if(this.canMove){
-            this.move(this.player_index, this.target_position);
-            this.canMove = false;
+            this.canMove = false
+            switch (event.keyCode) {
+                case cc.macro.KEY.up:
+                case cc.macro.KEY.w:
+                    this.moveUp();
+                    break;
+                case cc.macro.KEY.down:
+                case cc.macro.KEY.s:
+                    this.moveDown();
+                    break;
+                case cc.macro.KEY.left:
+                case cc.macro.KEY.a:
+                    this.moveLeft();
+                    break;
+                case cc.macro.KEY.right:
+                case cc.macro.KEY.d:
+                    this.moveRight();
+                    break;
+            }
+    
+            //now target position is player position but canvas not change 
+            
+            if(this.canLogicMove){
+                this.canLogicMove = false;
+                this.move(this.player_index, this.target_position);
+            }
+        } else {
+            alert("回合尚未结束！")
+            setTimeout(() => {
+                this.canMove = true;
+            }, 1000);
         }
+       
         
     }
 
     //return a random card type
-    setCardType(){
-        let r = Math.floor((Math.random() * this.cardType.length));
-        return this.cardType[r];
+    getCardType(){
+        let r = Math.random();
+        if( r < 0.2 ){
+            r = Math.floor((Math.random() * (this.cardType.length - 1))) + 1;
+            return this.cardType[r];
+        }
+        return this.cardType[0];
+
+    }
+
+    setPlayerStatus(damage:number[]){
+        this.node.getChildByName("" + this.player_index).getComponent(Player).receiveDamage(damage);
     }
 
     move(from, to){
+        console.log(from, to)
+        console.log(this.node.children);
+        this.canMove = false;
         let target_node = this.node.getChildByName(""+to);
 
-        let target_type:string = target_node.getComponent("Card").getType()
+        let target_type:string = target_node.getComponent("Card").getType();
         let damage:number[] = target_node.getComponent(target_type).disappear();
-        this.node.getChildByName("" + from).getComponent("Player").receiveDamage(damage);
+        if(damage && damage.length < 3){
+            if( !target_node.getComponent(target_type).init){
+                console.log("function error")
+            } else {
+                target_node.getComponent(target_type).init();
+            }
+            
+            damage = target_node.getComponent(target_type).disappear();
+        } else {
+            this.node.getChildByName("" + from).getComponent("Player").receiveDamage(damage);
+        }
+
+        
+        
+        target_type = null, damage = null;
 
         target_node.runAction(cc.scaleTo(0.3,0,0));
-        
+
+        target_node = null;
+
         setTimeout(()=>{
             this.otherCardPool.put(this.node.getChildByName(""+to));
             this.node.getChildByName(""+from).runAction(cc.moveTo(0.2,this.positions[to-1]))
             this.node.getChildByName(""+from).getComponent("Card").updateInfo({"index":to})
 
-           
-            setTimeout(()=>{
-                this.player_index = to;
-                let card:cc.Node = null;
-                if(this.otherCardPool.size()>0){
-                    console.log("card pool is not empty")
-                    card = this.otherCardPool.get();
-                } else {
-                    console.log("card pool is empty")
-                    card = cc.instantiate(this.cardPrefab)
-                }
-                this.initCard(card, from);
-                this.node.addChild(card);
-                this.canMove = false
-            }, 300)
-            
-            
-        },500)
+        },300)
         
+        setTimeout(()=>{
+            
+            this.player_index = to;
+            let card:cc.Node = null;
+            if(this.otherCardPool.size()>0){
+                card = this.otherCardPool.get();
+            } else {
+                card = cc.instantiate(this.cardPrefab)
+            }
+            this.initCard(card, from);
+            this.node.addChild(card);
+            card.runAction(cc.scaleTo(0.1,1,1));
+        }, 500)
+
+        setTimeout(()=>{
+            this.canMove = true;
+        }, 1000)
     }
 
 
@@ -226,28 +264,28 @@ export default class Controller extends cc.Component {
     moveUp() {
         if(this.player_index < 7){
             this.target_position = this.player_index + 3;
-            this.canMove = true
+            this.canLogicMove = true
         }
     }
 
     moveDown() {
         if(this.player_index > 3){
             this.target_position = this.player_index - 3;
-            this.canMove = true
+            this.canLogicMove = true
         }
     }
 
     moveLeft() {
         if(((this.player_index - 1) % 3) !== 0){
             this.target_position = this.player_index - 1;
-            this.canMove = true
+            this.canLogicMove = true
         }
     }
 
     moveRight() { 
         if(((this.player_index + 1) % 3 ) !== 1 ){
             this.target_position = this.player_index + 1;
-            this.canMove = true
+            this.canLogicMove = true
         }
     }
 
@@ -257,7 +295,7 @@ export default class Controller extends cc.Component {
 
     getPositons() {
         let positions:cc.Vec2[] = [];
-        let base_height = this.height - (this.cardHeight * 3) - (10 * 3)
+        let base_height = this.height - (this.cardHeight * 3) - (10 * 3) - 180
         for(let i=0; i<9;i++){
             let row = Math.floor(i / 3);
             let col = i % 3;
@@ -265,7 +303,6 @@ export default class Controller extends cc.Component {
             let y = base_height / 2 + (row * this.cardHeight) + row * 10 + this.cardHeight / 2;
             positions.push(new cc.Vec2(x, y));
         }
-        console.log(positions);
         return positions
     }
 

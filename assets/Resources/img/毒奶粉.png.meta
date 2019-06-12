@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "15146a15-e880-4fba-a781-9a5db9daebba",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "毒奶粉": {
+      "ver": "1.0.4",
+      "uuid": "d4b206ae-d3d1-43a1-a840-98b1a59e2499",
+      "rawTextureUuid": "15146a15-e880-4fba-a781-9a5db9daebba",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 225,
+      "height": 225,
+      "rawWidth": 225,
+      "rawHeight": 225,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

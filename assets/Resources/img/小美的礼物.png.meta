@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "cce3b3ad-8562-43f1-993a-9e0beb07b465",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "小美的礼物": {
+      "ver": "1.0.4",
+      "uuid": "b5f6621c-993d-4d1a-8798-e77a7b097d4e",
+      "rawTextureUuid": "cce3b3ad-8562-43f1-993a-9e0beb07b465",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 3,
+      "offsetY": -31,
+      "trimX": 35,
+      "trimY": 66,
+      "width": 636,
+      "height": 543,
+      "rawWidth": 700,
+      "rawHeight": 613,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

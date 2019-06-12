@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "f2c3ee44-b17a-43b8-a547-9d0d8c63e006",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "妈妈的礼物": {
+      "ver": "1.0.4",
+      "uuid": "bf4fc105-2acf-41d3-b5b0-b3e2a0befa82",
+      "rawTextureUuid": "f2c3ee44-b17a-43b8-a547-9d0d8c63e006",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 3,
+      "offsetY": -31,
+      "trimX": 35,
+      "trimY": 66,
+      "width": 636,
+      "height": 543,
+      "rawWidth": 700,
+      "rawHeight": 613,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

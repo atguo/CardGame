@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "2369d16b-e814-45c4-b1fd-dd344974c00a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "奶奶的礼物": {
+      "ver": "1.0.4",
+      "uuid": "8111213a-8f4f-419e-a043-368282e540cb",
+      "rawTextureUuid": "2369d16b-e814-45c4-b1fd-dd344974c00a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 3,
+      "offsetY": -31,
+      "trimX": 35,
+      "trimY": 66,
+      "width": 636,
+      "height": 543,
+      "rawWidth": 700,
+      "rawHeight": 613,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

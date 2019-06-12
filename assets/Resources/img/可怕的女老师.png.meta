@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "29639e93-116e-4fb1-9133-938ac820be41",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "可怕的女老师": {
+      "ver": "1.0.4",
+      "uuid": "ad24e9a2-eac4-44bf-8dbf-d9410a2e24c6",
+      "rawTextureUuid": "29639e93-116e-4fb1-9133-938ac820be41",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 582,
+      "height": 595,
+      "rawWidth": 582,
+      "rawHeight": 595,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

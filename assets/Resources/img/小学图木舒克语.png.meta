@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "2b42d1d3-f71b-4f7c-a917-0bf235f3565d",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "小学图木舒克语": {
+      "ver": "1.0.4",
+      "uuid": "ea60760d-5c95-4975-94bc-f169a2f95f79",
+      "rawTextureUuid": "2b42d1d3-f71b-4f7c-a917-0bf235f3565d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 358,
+      "height": 265,
+      "rawWidth": 358,
+      "rawHeight": 265,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

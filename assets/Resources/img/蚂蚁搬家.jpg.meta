@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "3b673d02-c367-4b21-8e70-0145c49b0805",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "蚂蚁搬家": {
+      "ver": "1.0.4",
+      "uuid": "18bde8d9-00bd-433e-9d6f-138ea46aaa6a",
+      "rawTextureUuid": "3b673d02-c367-4b21-8e70-0145c49b0805",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 567,
+      "height": 567,
+      "rawWidth": 567,
+      "rawHeight": 567,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

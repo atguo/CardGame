@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "34e76caf-c155-4af3-b51a-e082e5b15530",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "假疫苗": {
+      "ver": "1.0.4",
+      "uuid": "cc1e4dc9-3236-41cb-8eb8-82bbbef616bc",
+      "rawTextureUuid": "34e76caf-c155-4af3-b51a-e082e5b15530",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 650,
+      "height": 651,
+      "rawWidth": 650,
+      "rawHeight": 651,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

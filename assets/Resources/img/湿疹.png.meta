@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "59b98dfb-4a5c-4be8-9017-8e48c195f07b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "湿疹": {
+      "ver": "1.0.4",
+      "uuid": "de8b62e3-2dc9-4db8-af78-296766f6ee24",
+      "rawTextureUuid": "59b98dfb-4a5c-4be8-9017-8e48c195f07b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 49,
+      "trimY": 60,
+      "width": 512,
+      "height": 490,
+      "rawWidth": 610,
+      "rawHeight": 610,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

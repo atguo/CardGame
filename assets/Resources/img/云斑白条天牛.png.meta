@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "82a25d41-e2d5-4632-8648-ff817c59cc7e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "云斑白条天牛": {
+      "ver": "1.0.4",
+      "uuid": "dd2aedd8-bda1-4250-9bcc-f0794016c38b",
+      "rawTextureUuid": "82a25d41-e2d5-4632-8648-ff817c59cc7e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 320,
+      "height": 366,
+      "rawWidth": 320,
+      "rawHeight": 366,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "a4aa2ac7-3e7c-4be9-b4a4-b1cf704aec4c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "史诗数学老师": {
+      "ver": "1.0.4",
+      "uuid": "9381ff46-6fda-4670-80f1-7b2426a3099a",
+      "rawTextureUuid": "a4aa2ac7-3e7c-4be9-b4a4-b1cf704aec4c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -0.5,
+      "trimX": 1,
+      "trimY": 1,
+      "width": 1303,
+      "height": 1448,
+      "rawWidth": 1304,
+      "rawHeight": 1449,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

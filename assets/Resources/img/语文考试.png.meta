@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "145cb2a5-fae0-413a-bf01-30ae8ad5c54b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "语文考试": {
+      "ver": "1.0.4",
+      "uuid": "8a40f5be-80ff-4f54-9273-eab39ff73ddd",
+      "rawTextureUuid": "145cb2a5-fae0-413a-bf01-30ae8ad5c54b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 557,
+      "height": 543,
+      "rawWidth": 557,
+      "rawHeight": 543,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

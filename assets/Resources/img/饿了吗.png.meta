@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "29987b58-56f5-4dd5-9d8e-571fc10f8b34",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "饿了吗": {
+      "ver": "1.0.4",
+      "uuid": "e57eaece-e76b-4dee-b346-68aa85f02153",
+      "rawTextureUuid": "29987b58-56f5-4dd5-9d8e-571fc10f8b34",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 3,
+      "offsetY": -31,
+      "trimX": 35,
+      "trimY": 66,
+      "width": 636,
+      "height": 543,
+      "rawWidth": 700,
+      "rawHeight": 613,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

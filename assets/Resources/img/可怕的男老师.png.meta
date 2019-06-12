@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "c0a988f9-4dc2-4a70-aa13-4eca9c5c5576",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "可怕的男老师": {
+      "ver": "1.0.4",
+      "uuid": "bd1aef39-a809-4466-9ac2-db91bd577bfc",
+      "rawTextureUuid": "c0a988f9-4dc2-4a70-aa13-4eca9c5c5576",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 582,
+      "height": 595,
+      "rawWidth": 582,
+      "rawHeight": 595,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

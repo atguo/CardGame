@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "822be2b0-d8b2-40e8-84cb-1ac9c2b25cc1",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "钢琴课老师": {
+      "ver": "1.0.4",
+      "uuid": "b1a4c6a1-6de5-4375-926b-b6d8415e23ef",
+      "rawTextureUuid": "822be2b0-d8b2-40e8-84cb-1ac9c2b25cc1",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": 0.5,
+      "trimX": 8,
+      "trimY": 186,
+      "width": 983,
+      "height": 627,
+      "rawWidth": 1000,
+      "rawHeight": 1000,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "aa73c81c-3c64-4232-9597-7dd98e375531",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "足球": {
+      "ver": "1.0.4",
+      "uuid": "6a0970a1-63e0-452a-8f92-bc121d98265d",
+      "rawTextureUuid": "aa73c81c-3c64-4232-9597-7dd98e375531",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 5,
+      "offsetY": -2.5,
+      "trimX": 214,
+      "trimY": 212,
+      "width": 1236,
+      "height": 1235,
+      "rawWidth": 1654,
+      "rawHeight": 1654,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "0b5259a3-1f2c-4fe8-a40e-e4d415f59b8a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "教导主任": {
+      "ver": "1.0.4",
+      "uuid": "cf0e6c61-1495-4724-9144-34d328e43652",
+      "rawTextureUuid": "0b5259a3-1f2c-4fe8-a40e-e4d415f59b8a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 576,
+      "height": 451,
+      "rawWidth": 576,
+      "rawHeight": 451,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

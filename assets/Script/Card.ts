@@ -61,16 +61,18 @@ export default class Card extends cc.Component {
 
     updateCardInfo(){
         this.node.children[0].getComponent(cc.Label).string = this.cardName
-        this.node.name = "" + this.index;
     }
 
     updateInfo(info){
-        this.index = info.index;
+        if(info.index){
+            this.index = info.index;
+            this.node.name = "" + this.index;
+        }
         if(info.position){
             this.position = info.position;
             this.node.setPosition(this.position);
         }
-        if(info.tpye){
+        if(info.type){
             this.type = info.type
         }
         if(info.cardName){
@@ -87,11 +89,13 @@ export default class Card extends cc.Component {
     }
     
     unuse(){
-        console.log("unuse excuted:",this.node)
+        this.node.getChildByName("hp").getComponent(cc.Label).string = "";
+        this.node.getChildByName("Img").getComponent(cc.Sprite).spriteFrame = null;
+        this.node.getChildByName("cardName").getComponent(cc.Label).string = "";
+        
     }
 
     reuse(){
-        this.node.runAction(cc.scaleTo(0.1,1,1));
-        console.log('reuse excuted')
+       
     }
 }

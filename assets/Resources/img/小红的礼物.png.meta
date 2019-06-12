@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "98940e55-18fa-4581-ae9c-1026a638fcdc",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "小红的礼物": {
+      "ver": "1.0.4",
+      "uuid": "5bff9896-f5d7-4016-bb83-7d4ecef1044c",
+      "rawTextureUuid": "98940e55-18fa-4581-ae9c-1026a638fcdc",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 3,
+      "offsetY": -31,
+      "trimX": 35,
+      "trimY": 66,
+      "width": 636,
+      "height": 543,
+      "rawWidth": 700,
+      "rawHeight": 613,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
