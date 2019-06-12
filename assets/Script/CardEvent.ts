@@ -48,7 +48,6 @@ export default class CardEvent extends cc.Component {
 
     disappear(){
         this.node.parent.parent.getChildByName("Event").getComponent(EventTriger).setEvent(this.event);
-        this.node.parent.parent.getChildByName("Event").opacity = 255;
         return [0,0,0];
     }
     // update (dt) {}

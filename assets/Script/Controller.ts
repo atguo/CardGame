@@ -189,7 +189,7 @@ export default class Controller extends cc.Component {
     //return a random card type
     getCardType(){
         let r = Math.random();
-        if( r < 0.2 ){
+        if( r < 0.35 ){
             r = Math.floor((Math.random() * (this.cardType.length - 1))) + 1;
             return this.cardType[r];
         }

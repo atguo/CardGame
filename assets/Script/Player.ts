@@ -25,7 +25,7 @@ export default class Player extends cc.Component {
 
 
     onLoad () {
-        this.status = [10, 10, 10];
+        this.status = [100, 100, 100];
     }
 
     start() {
